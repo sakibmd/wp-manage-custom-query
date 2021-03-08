@@ -25,6 +25,14 @@ $posts_per_page = 2;
 
 // ));
 
+// $_p = new WP_Query(array(   //month, year & post status wise post show
+//     'paged' => $paged,
+//     'posts_per_page' => $posts_per_page,
+//     'monthnum' => 2,
+//     'year' => 2021,
+//     'post_status' => 'publish',
+// ));
+
 // $_p = new WP_Query(array(   //relationship
 //     'paged' => $paged,
 //     'posts_per_page' => $posts_per_page,
@@ -72,8 +80,6 @@ $posts_per_page = 2;
 $_p = new WP_Query(array( //filter using multiple metabox value || used to show post in specfic page //https://rudrastyh.com/wordpress/meta_query.html
     'paged' => $paged,
     'posts_per_page' => $posts_per_page,
-    'meta_key' => 'excerpt_is_featured',
-    'meta_value' => '1',
     'meta_query' => array(
         'relation' => 'AND', // both of below conditions must match
         array(

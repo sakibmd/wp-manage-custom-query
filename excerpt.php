@@ -29,7 +29,7 @@ class Excerpt
     public function excerpt_hide_blogs_from_blogpage($wpq)
     {
         if (is_home() && is_main_query()) {
-            //$wpq->set('post__not_in', array(19));
+            $wpq->set('post__not_in', array(15,17)); 
             $wpq->set('tag__not_in', array(3));
         }
     }
